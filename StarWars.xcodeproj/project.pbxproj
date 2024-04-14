@@ -21,6 +21,7 @@
 		1320E4DC2BCC315700402299 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4DB2BCC315700402299 /* MoviesViewModel.swift */; };
 		1320E4DF2BCC320100402299 /* BackendServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4DE2BCC320100402299 /* BackendServiceProtocol.swift */; };
 		1320E4E12BCC326E00402299 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E02BCC326E00402299 /* BackendService.swift */; };
+		1320E4E32BCC35AB00402299 /* MovieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E22BCC35AB00402299 /* MovieRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1320E4DB2BCC315700402299 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		1320E4DE2BCC320100402299 /* BackendServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendServiceProtocol.swift; sourceTree = "<group>"; };
 		1320E4E02BCC326E00402299 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
+		1320E4E22BCC35AB00402299 /* MovieRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4A52BCC301600402299 /* MoviesView.swift */,
+				1320E4E22BCC35AB00402299 /* MovieRowView.swift */,
 				1320E4DB2BCC315700402299 /* MoviesViewModel.swift */,
 			);
 			path = Movies;
@@ -333,6 +336,7 @@
 				1320E4D62BCC30D200402299 /* Movies.swift in Sources */,
 				1320E4A62BCC301600402299 /* MoviesView.swift in Sources */,
 				1320E4D02BCC303C00402299 /* APIService.swift in Sources */,
+				1320E4E32BCC35AB00402299 /* MovieRowView.swift in Sources */,
 				1320E4D32BCC307700402299 /* Endpoint.swift in Sources */,
 				1320E4DC2BCC315700402299 /* MoviesViewModel.swift in Sources */,
 				1320E4D82BCC30E700402299 /* People.swift in Sources */,

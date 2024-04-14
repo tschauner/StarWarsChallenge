@@ -7,16 +7,23 @@
 
 import SwiftUI
 
-struct MoviesView: View {
+struct MoviesView<T: MoviesViewModelProtocol>: View where T.Action == MoviesViewModel.Action {
+    @State var viewModel: T
 
-    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(viewModel.movies, id: \.id) { movie in
+                MovieRowView(movie: movie)
+                    .onTapGesture {
+                        viewModel.handle(action: .movieTapped)
+                    }
+            }
         }
+        .listStyle(.plain)
         .padding()
+        .navigationTitle("Movies")
+        .task {
+            viewModel.getMovies()
+        }
     }
 }
