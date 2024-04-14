@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Movies: Codable {
+struct Movies: Codable, Equatable {
     let results: [Movie]
 }
 
-struct Movie: Codable, Identifiable {
+struct Movie: Codable, Identifiable, Hashable, Equatable {
     let id = UUID().uuidString
     let title: String?
     let episodeID: Int?

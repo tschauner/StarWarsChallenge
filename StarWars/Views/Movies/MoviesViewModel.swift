@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol MoviesViewModelProtocol {
     associatedtype Action
     var backendService: BackendServiceProtocol { get set }
     var movies: [Movie] { get set }
+    var navigationPath: NavigationPath { get set }
     func handle(action: Action)
     func getMovies()
 }
@@ -20,7 +22,8 @@ class MoviesViewModel: MoviesViewModelProtocol {
     var backendService: BackendServiceProtocol
 
     var movies: [Movie] = []
-    
+    var navigationPath = NavigationPath()
+
     init(backendService: BackendServiceProtocol = BackendService()) {
         self.backendService = backendService
     }
@@ -28,8 +31,8 @@ class MoviesViewModel: MoviesViewModelProtocol {
     @MainActor
     func handle(action: Action) {
         switch action {
-        case .movieTapped:
-            getMovies()
+        case .movieTapped(let movie):
+            showMovieDetail(with: movie)
         }
     }
 
@@ -46,11 +49,19 @@ class MoviesViewModel: MoviesViewModelProtocol {
             }
         }
     }
+
+    private func showMovieDetail(with movie: Movie) {
+        navigationPath.append(Screen.movieDetail(movie))
+    }
 }
 
 extension MoviesViewModel {
 
     enum Action {
-        case movieTapped
+        case movieTapped(Movie)
+    }
+
+    enum Screen: StarWarsScreen {
+        case movieDetail(Movie)
     }
 }

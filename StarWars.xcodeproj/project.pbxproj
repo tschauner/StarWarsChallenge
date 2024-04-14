@@ -24,6 +24,7 @@
 		1320E4E32BCC35AB00402299 /* MovieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E22BCC35AB00402299 /* MovieRowView.swift */; };
 		1320E4E72BCC38FB00402299 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E62BCC38FB00402299 /* Image+Extension.swift */; };
 		1320E4EA2BCC39AD00402299 /* StarWarsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E92BCC39AD00402299 /* StarWarsIcon.swift */; };
+		1320E4EC2BCC3D7E00402299 /* StarWarsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		1320E4E22BCC35AB00402299 /* MovieRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowView.swift; sourceTree = "<group>"; };
 		1320E4E62BCC38FB00402299 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		1320E4E92BCC39AD00402299 /* StarWarsIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsIcon.swift; sourceTree = "<group>"; };
+		1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4DE2BCC320100402299 /* BackendServiceProtocol.swift */,
+				1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1320E4E72BCC38FB00402299 /* Image+Extension.swift in Sources */,
+				1320E4EC2BCC3D7E00402299 /* StarWarsScreen.swift in Sources */,
 				1320E4DF2BCC320100402299 /* BackendServiceProtocol.swift in Sources */,
 				1320E4E12BCC326E00402299 /* BackendService.swift in Sources */,
 				1320E4D62BCC30D200402299 /* Movies.swift in Sources */,

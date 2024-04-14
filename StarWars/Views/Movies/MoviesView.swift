@@ -11,19 +11,30 @@ struct MoviesView<T: MoviesViewModelProtocol>: View where T.Action == MoviesView
     @State var viewModel: T
 
     var body: some View {
-        List {
-            ForEach(viewModel.movies, id: \.id) { movie in
-                MovieRowView(movie: movie)
-                    .onTapGesture {
-                        viewModel.handle(action: .movieTapped)
-                    }
+        NavigationStack(path: $viewModel.navigationPath) {
+            List {
+                ForEach(viewModel.movies, id: \.id) { movie in
+                    MovieRowView(movie: movie)
+                        .onTapGesture {
+                            viewModel.handle(action: .movieTapped(movie))
+                        }
+                }
             }
+            .listStyle(.plain)
+            .padding(.top, 15)
+            .navigationTitle("Movies")
+            .task {
+                viewModel.getMovies()
+            }
+            .navigationDestination(for: MoviesViewModel.Screen.self, destination: view)
         }
-        .listStyle(.plain)
-        .padding(.top, 15)
-        .navigationTitle("Movies")
-        .task {
-            viewModel.getMovies()
+    }
+    
+    @ViewBuilder
+    private func view(for screen: MoviesViewModel.Screen) -> some View {
+        switch screen {
+        case .movieDetail(let movie):
+            EmptyView()
         }
     }
 }
