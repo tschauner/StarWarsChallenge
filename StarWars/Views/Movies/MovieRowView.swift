@@ -30,5 +30,6 @@ struct MovieRowView: View {
 
             Image(icon: .chevronRight)
         }
+        .contentShape(Rectangle())
     }
 }

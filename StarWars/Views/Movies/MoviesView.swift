@@ -15,7 +15,7 @@ struct MoviesView<T: MoviesViewModelProtocol>: View where T.Action == MoviesView
             List {
                 ForEach(viewModel.movies, id: \.id) { movie in
                     MovieRowView(movie: movie)
-                        .onTapGesture {
+                        .button {
                             viewModel.handle(action: .movieTapped(movie))
                         }
                 }

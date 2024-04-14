@@ -12,4 +12,8 @@ extension View {
     func optionalTitle(_ title: String?) -> some View {
         modifier(NavigationTitleModifier(title: title))
     }
+
+    func button(_ action: @escaping () -> Void) -> some View {
+        modifier(ButtonModifier(action: action))
+    }
 }
