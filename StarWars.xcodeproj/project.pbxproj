@@ -16,6 +16,8 @@
 		1320E4C22BCC301700402299 /* StarWarsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4C12BCC301700402299 /* StarWarsUITestsLaunchTests.swift */; };
 		1320E4D02BCC303C00402299 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4CF2BCC303C00402299 /* APIService.swift */; };
 		1320E4D32BCC307700402299 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4D22BCC307700402299 /* Endpoint.swift */; };
+		1320E4D62BCC30D200402299 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4D52BCC30D200402299 /* Movies.swift */; };
+		1320E4D82BCC30E700402299 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4D72BCC30E700402299 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1320E4C12BCC301700402299 /* StarWarsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1320E4CF2BCC303C00402299 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1320E4D22BCC307700402299 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1320E4D52BCC30D200402299 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		1320E4D72BCC30E700402299 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				1320E4A32BCC301600402299 /* StarWarsApp.swift */,
 				1320E4A52BCC301600402299 /* ContentView.swift */,
+				1320E4D42BCC30BB00402299 /* Models */,
 				1320E4D12BCC306D00402299 /* Endpoint */,
 				1320E4CE2BCC302100402299 /* Services */,
 				1320E4A72BCC301700402299 /* Assets.xcassets */,
@@ -149,6 +154,15 @@
 				1320E4D22BCC307700402299 /* Endpoint.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		1320E4D42BCC30BB00402299 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4D52BCC30D200402299 /* Movies.swift */,
+				1320E4D72BCC30E700402299 /* People.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1320E4D62BCC30D200402299 /* Movies.swift in Sources */,
 				1320E4A62BCC301600402299 /* ContentView.swift in Sources */,
 				1320E4D02BCC303C00402299 /* APIService.swift in Sources */,
 				1320E4D32BCC307700402299 /* Endpoint.swift in Sources */,
+				1320E4D82BCC30E700402299 /* People.swift in Sources */,
 				1320E4A42BCC301600402299 /* StarWarsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
