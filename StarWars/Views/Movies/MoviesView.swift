@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MoviesView.swift
 //  StarWars
 //
 //  Created by Philipp Tschauner on 14.04.24.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MoviesView: View {
+
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -17,8 +19,4 @@ struct ContentView: View {
         }
         .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }

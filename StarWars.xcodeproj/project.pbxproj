@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1320E4A42BCC301600402299 /* StarWarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4A32BCC301600402299 /* StarWarsApp.swift */; };
-		1320E4A62BCC301600402299 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4A52BCC301600402299 /* ContentView.swift */; };
+		1320E4A62BCC301600402299 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4A52BCC301600402299 /* MoviesView.swift */; };
 		1320E4A82BCC301700402299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1320E4A72BCC301700402299 /* Assets.xcassets */; };
 		1320E4AC2BCC301700402299 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1320E4AB2BCC301700402299 /* Preview Assets.xcassets */; };
 		1320E4B62BCC301700402299 /* StarWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4B52BCC301700402299 /* StarWarsTests.swift */; };
@@ -18,6 +18,9 @@
 		1320E4D32BCC307700402299 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4D22BCC307700402299 /* Endpoint.swift */; };
 		1320E4D62BCC30D200402299 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4D52BCC30D200402299 /* Movies.swift */; };
 		1320E4D82BCC30E700402299 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4D72BCC30E700402299 /* People.swift */; };
+		1320E4DC2BCC315700402299 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4DB2BCC315700402299 /* MoviesViewModel.swift */; };
+		1320E4DF2BCC320100402299 /* BackendServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4DE2BCC320100402299 /* BackendServiceProtocol.swift */; };
+		1320E4E12BCC326E00402299 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E02BCC326E00402299 /* BackendService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 /* Begin PBXFileReference section */
 		1320E4A02BCC301600402299 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1320E4A32BCC301600402299 /* StarWarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApp.swift; sourceTree = "<group>"; };
-		1320E4A52BCC301600402299 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1320E4A52BCC301600402299 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		1320E4A72BCC301700402299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1320E4A92BCC301700402299 /* StarWars.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarWars.entitlements; sourceTree = "<group>"; };
 		1320E4AB2BCC301700402299 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,6 +56,9 @@
 		1320E4D22BCC307700402299 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1320E4D52BCC30D200402299 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		1320E4D72BCC30E700402299 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		1320E4DB2BCC315700402299 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		1320E4DE2BCC320100402299 /* BackendServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendServiceProtocol.swift; sourceTree = "<group>"; };
+		1320E4E02BCC326E00402299 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				1320E4A32BCC301600402299 /* StarWarsApp.swift */,
-				1320E4A52BCC301600402299 /* ContentView.swift */,
+				1320E4DD2BCC31E600402299 /* Protocols */,
+				1320E4D92BCC314400402299 /* Views */,
 				1320E4D42BCC30BB00402299 /* Models */,
 				1320E4D12BCC306D00402299 /* Endpoint */,
 				1320E4CE2BCC302100402299 /* Services */,
@@ -144,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4CF2BCC303C00402299 /* APIService.swift */,
+				1320E4E02BCC326E00402299 /* BackendService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -163,6 +171,31 @@
 				1320E4D72BCC30E700402299 /* People.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1320E4D92BCC314400402299 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4DA2BCC314C00402299 /* Movies */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1320E4DA2BCC314C00402299 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4A52BCC301600402299 /* MoviesView.swift */,
+				1320E4DB2BCC315700402299 /* MoviesViewModel.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		1320E4DD2BCC31E600402299 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4DE2BCC320100402299 /* BackendServiceProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1320E4DF2BCC320100402299 /* BackendServiceProtocol.swift in Sources */,
+				1320E4E12BCC326E00402299 /* BackendService.swift in Sources */,
 				1320E4D62BCC30D200402299 /* Movies.swift in Sources */,
-				1320E4A62BCC301600402299 /* ContentView.swift in Sources */,
+				1320E4A62BCC301600402299 /* MoviesView.swift in Sources */,
 				1320E4D02BCC303C00402299 /* APIService.swift in Sources */,
 				1320E4D32BCC307700402299 /* Endpoint.swift in Sources */,
+				1320E4DC2BCC315700402299 /* MoviesViewModel.swift in Sources */,
 				1320E4D82BCC30E700402299 /* People.swift in Sources */,
 				1320E4A42BCC301600402299 /* StarWarsApp.swift in Sources */,
 			);

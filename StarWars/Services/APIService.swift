@@ -13,7 +13,7 @@ enum APIError: Error {
 }
 
 class APIService {
-    static let shared = APIManager()
+    static let shared = APIService()
 
     func get<T: Codable>(_ endpoint: Endpoint) async throws -> T {
         let data = try await data(for: endpoint).data
