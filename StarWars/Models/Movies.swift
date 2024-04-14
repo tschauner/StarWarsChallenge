@@ -14,10 +14,6 @@ struct Movies: Codable, Equatable {
 struct Movie: Codable, Identifiable, Hashable, Equatable {
     let id = UUID().uuidString
     let title: String?
-    let episodeID: Int?
-    let openingCrawl, director, producer, releaseDate: String?
-    let characters, planets, starships, vehicles: [String]?
-    let species: [String]?
-    let created, edited: String?
-    let url: String?
+    let openingCrawl, director, producer: String?
+    let characters: [String]?
 }

@@ -10,6 +10,7 @@ import Foundation
 enum APIError: Error {
     case decodingFailed
     case urlRequestFailed
+    case general
 }
 
 class APIService {

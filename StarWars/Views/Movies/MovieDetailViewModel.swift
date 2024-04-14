@@ -10,6 +10,7 @@ import Foundation
 protocol MovieDetailViewModelProtocol {
     associatedtype Action
     var backendService: BackendServiceProtocol { get set }
+    var errorReportingService: ErrorReportingServiceProtocol { get set }
     var showLoading: Bool { get set }
     func handle(action: Action)
     var movie: Movie { get set }
@@ -19,14 +20,17 @@ protocol MovieDetailViewModelProtocol {
 @Observable
 class MovieDetailViewModel: MovieDetailViewModelProtocol {
     var backendService: BackendServiceProtocol
+    var errorReportingService: ErrorReportingServiceProtocol
     var showLoading: Bool = false
     var movie: Movie
 
     init(movie: Movie,
-         backendService: BackendServiceProtocol = BackendService()
+         backendService: BackendServiceProtocol = BackendService(),
+         errorReportingService: ErrorReportingServiceProtocol = ErrorReportingService()
     ) {
-        self.backendService = backendService
         self.movie = movie
+        self.backendService = backendService
+        self.errorReportingService = errorReportingService
     }
 
     @MainActor
@@ -49,7 +53,7 @@ class MovieDetailViewModel: MovieDetailViewModelProtocol {
                 }
             } catch {
                 showLoading = false
-                print(error.localizedDescription)
+                errorReportingService.report(error: error)
             }
         }
     }

@@ -11,6 +11,7 @@ import SwiftUI
 protocol MoviesViewModelProtocol {
     associatedtype Action
     var backendService: BackendServiceProtocol { get set }
+    var errorReportingService: ErrorReportingServiceProtocol { get set }
     var movies: [Movie] { get set }
     var showLoading: Bool { get set }
     var navigationPath: NavigationPath { get set }
@@ -21,12 +22,16 @@ protocol MoviesViewModelProtocol {
 @Observable
 class MoviesViewModel: MoviesViewModelProtocol {
     var backendService: BackendServiceProtocol
+    var errorReportingService: ErrorReportingServiceProtocol
     var showLoading: Bool = false
     var movies: [Movie] = []
     var navigationPath = NavigationPath()
 
-    init(backendService: BackendServiceProtocol = BackendService()) {
+    init(backendService: BackendServiceProtocol = BackendService(),
+         errorReportingService: ErrorReportingServiceProtocol = ErrorReportingService()
+    ) {
         self.backendService = backendService
+        self.errorReportingService = errorReportingService
 
         Task { await getMovies() }
     }
@@ -50,7 +55,7 @@ class MoviesViewModel: MoviesViewModelProtocol {
             }
         } catch {
             showLoading = false
-            print(error.localizedDescription)
+            errorReportingService.report(error: error)
         }
     }
 

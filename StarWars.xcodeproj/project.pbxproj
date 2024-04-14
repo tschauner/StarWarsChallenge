@@ -31,6 +31,12 @@
 		1320E4F52BCC430B00402299 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F42BCC430B00402299 /* ButtonModifier.swift */; };
 		1320E4F72BCC457800402299 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F62BCC457800402299 /* MovieDetailViewModel.swift */; };
 		1320E4F92BCC4B3700402299 /* LoadingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F82BCC4B3700402299 /* LoadingModifier.swift */; };
+		1320E4FC2BCC4F3600402299 /* MockBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4FB2BCC4F3600402299 /* MockBackendService.swift */; };
+		1320E4FE2BCC500000402299 /* MockPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4FD2BCC500000402299 /* MockPeople.swift */; };
+		1320E5002BCC50C800402299 /* MockMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4FF2BCC50C800402299 /* MockMovies.swift */; };
+		1320E5022BCC545200402299 /* ErrorReportingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E5012BCC545200402299 /* ErrorReportingServiceProtocol.swift */; };
+		1320E5042BCC546D00402299 /* ErrorReportingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E5032BCC546D00402299 /* ErrorReportingService.swift */; };
+		1320E5062BCC559C00402299 /* MockErrorReportingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E5052BCC559C00402299 /* MockErrorReportingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,12 @@
 		1320E4F42BCC430B00402299 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		1320E4F62BCC457800402299 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		1320E4F82BCC4B3700402299 /* LoadingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModifier.swift; sourceTree = "<group>"; };
+		1320E4FB2BCC4F3600402299 /* MockBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBackendService.swift; sourceTree = "<group>"; };
+		1320E4FD2BCC500000402299 /* MockPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPeople.swift; sourceTree = "<group>"; };
+		1320E4FF2BCC50C800402299 /* MockMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMovies.swift; sourceTree = "<group>"; };
+		1320E5012BCC545200402299 /* ErrorReportingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorReportingServiceProtocol.swift; sourceTree = "<group>"; };
+		1320E5032BCC546D00402299 /* ErrorReportingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorReportingService.swift; sourceTree = "<group>"; };
+		1320E5052BCC559C00402299 /* MockErrorReportingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockErrorReportingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4B52BCC301700402299 /* StarWarsTests.swift */,
+				1320E4FA2BCC4F2300402299 /* Mock */,
 			);
 			path = StarWarsTests;
 			sourceTree = "<group>";
@@ -174,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4CF2BCC303C00402299 /* APIService.swift */,
+				1320E5032BCC546D00402299 /* ErrorReportingService.swift */,
 				1320E4E02BCC326E00402299 /* BackendService.swift */,
 			);
 			path = Services;
@@ -220,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4DE2BCC320100402299 /* BackendServiceProtocol.swift */,
+				1320E5012BCC545200402299 /* ErrorReportingServiceProtocol.swift */,
 				1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */,
 			);
 			path = Protocols;
@@ -250,6 +265,17 @@
 				1320E4F82BCC4B3700402299 /* LoadingModifier.swift */,
 			);
 			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		1320E4FA2BCC4F2300402299 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4FB2BCC4F3600402299 /* MockBackendService.swift */,
+				1320E5052BCC559C00402299 /* MockErrorReportingService.swift */,
+				1320E4FD2BCC500000402299 /* MockPeople.swift */,
+				1320E4FF2BCC50C800402299 /* MockMovies.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +410,7 @@
 			files = (
 				1320E4E72BCC38FB00402299 /* Image+Extension.swift in Sources */,
 				1320E4EC2BCC3D7E00402299 /* StarWarsScreen.swift in Sources */,
+				1320E5022BCC545200402299 /* ErrorReportingServiceProtocol.swift in Sources */,
 				1320E4F32BCC403600402299 /* View+Extension.swift in Sources */,
 				1320E4F12BCC401A00402299 /* NavigationTitleModifier.swift in Sources */,
 				1320E4DF2BCC320100402299 /* BackendServiceProtocol.swift in Sources */,
@@ -400,6 +427,7 @@
 				1320E4F52BCC430B00402299 /* ButtonModifier.swift in Sources */,
 				1320E4D82BCC30E700402299 /* People.swift in Sources */,
 				1320E4A42BCC301600402299 /* StarWarsApp.swift in Sources */,
+				1320E5042BCC546D00402299 /* ErrorReportingService.swift in Sources */,
 				1320E4F92BCC4B3700402299 /* LoadingModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1320E5002BCC50C800402299 /* MockMovies.swift in Sources */,
+				1320E5062BCC559C00402299 /* MockErrorReportingService.swift in Sources */,
+				1320E4FE2BCC500000402299 /* MockPeople.swift in Sources */,
+				1320E4FC2BCC4F3600402299 /* MockBackendService.swift in Sources */,
 				1320E4B62BCC301700402299 /* StarWarsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

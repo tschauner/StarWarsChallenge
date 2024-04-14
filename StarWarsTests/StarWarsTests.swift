@@ -6,30 +6,58 @@
 //
 
 import XCTest
+@testable import StarWars
 
 final class StarWarsTests: XCTestCase {
+    var sut: MoviesViewModel!
+    var mockBackendService: MockBackendService!
+    var mockErrorReportingService: MockErrorReportingService!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        mockBackendService = MockBackendService()
+        mockErrorReportingService = MockErrorReportingService()
+        sut = .init(
+            backendService: mockBackendService,
+            errorReportingService: mockErrorReportingService
+        )
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockBackendService = nil
+        mockErrorReportingService = nil
+        sut = nil
+    }
+    
+    @MainActor
+    func test_movieTapped_succeed() async {
+        // Given
+        let expectation = XCTestExpectation(description: "getMoviesExpectation")
+        mockBackendService.expectation = expectation
+
+        // When
+        let movie = Movies.mockMovies.results[0]
+        sut.handle(action: .movieTapped(movie))
+        await fulfillment(of: [expectation])
+
+        // Then
+        XCTAssertEqual(sut.navigationPath.count, 1)
+        XCTAssertTrue(mockBackendService.getMoviesCalled)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    @MainActor
+    func test_movieTapped_fail() async {
+        // Given
+        let expectation = XCTestExpectation(description: "getMoviesExpectation")
+        mockErrorReportingService.expectation = expectation
+        mockBackendService.shouldSucceed = false
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+        // When
+        let movie = Movies.mockMovies.results[0]
+        sut.handle(action: .movieTapped(movie))
+        await fulfillment(of: [expectation])
 
+        // Then
+        XCTAssertTrue(mockBackendService.getMoviesCalled)
+        XCTAssertEqual(mockErrorReportingService.reportableMessage, "The operation couldn’t be completed. (StarWars.APIError error 2.)")
+    }
 }
