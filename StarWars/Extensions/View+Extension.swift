@@ -16,4 +16,8 @@ extension View {
     func button(_ action: @escaping () -> Void) -> some View {
         modifier(ButtonModifier(action: action))
     }
+
+    func showLoading(_ isLoading: Bool) -> some View {
+        modifier(LoadingModifier(isLoading: isLoading))
+    }
 }

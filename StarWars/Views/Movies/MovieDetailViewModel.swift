@@ -10,6 +10,7 @@ import Foundation
 protocol MovieDetailViewModelProtocol {
     associatedtype Action
     var backendService: BackendServiceProtocol { get set }
+    var showLoading: Bool { get set }
     func handle(action: Action)
     var movie: Movie { get set }
     func getAndShowPeople()
@@ -18,6 +19,7 @@ protocol MovieDetailViewModelProtocol {
 @Observable
 class MovieDetailViewModel: MovieDetailViewModelProtocol {
     var backendService: BackendServiceProtocol
+    var showLoading: Bool = false
     var movie: Movie
 
     init(movie: Movie,
@@ -39,11 +41,14 @@ class MovieDetailViewModel: MovieDetailViewModelProtocol {
     func getAndShowPeople() {
         Task {
             do {
+                showLoading = true
                 let characters = try await backendService.getPeople().result
                 await MainActor.run {
+                    showLoading = false
                     showPeople(with: characters)
                 }
             } catch {
+                showLoading = false
                 print(error.localizedDescription)
             }
         }

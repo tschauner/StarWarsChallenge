@@ -22,10 +22,8 @@ struct MoviesView<T: MoviesViewModelProtocol>: View where T.Action == MoviesView
             }
             .listStyle(.plain)
             .padding(.top, 15)
+            .showLoading(viewModel.showLoading)
             .navigationTitle("Movies")
-            .task {
-                viewModel.getMovies()
-            }
             .navigationDestination(for: MoviesViewModel.Screen.self, destination: view)
         }
     }

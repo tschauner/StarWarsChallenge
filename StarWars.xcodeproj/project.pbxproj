@@ -30,6 +30,7 @@
 		1320E4F32BCC403600402299 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F22BCC403600402299 /* View+Extension.swift */; };
 		1320E4F52BCC430B00402299 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F42BCC430B00402299 /* ButtonModifier.swift */; };
 		1320E4F72BCC457800402299 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F62BCC457800402299 /* MovieDetailViewModel.swift */; };
+		1320E4F92BCC4B3700402299 /* LoadingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F82BCC4B3700402299 /* LoadingModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		1320E4F22BCC403600402299 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		1320E4F42BCC430B00402299 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		1320E4F62BCC457800402299 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		1320E4F82BCC4B3700402299 /* LoadingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 			children = (
 				1320E4F02BCC401A00402299 /* NavigationTitleModifier.swift */,
 				1320E4F42BCC430B00402299 /* ButtonModifier.swift */,
+				1320E4F82BCC4B3700402299 /* LoadingModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				1320E4F52BCC430B00402299 /* ButtonModifier.swift in Sources */,
 				1320E4D82BCC30E700402299 /* People.swift in Sources */,
 				1320E4A42BCC301600402299 /* StarWarsApp.swift in Sources */,
+				1320E4F92BCC4B3700402299 /* LoadingModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

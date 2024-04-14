@@ -45,6 +45,7 @@ struct MovieDetailView<T: MovieDetailViewModelProtocol>: View where T.Action == 
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(15)
+        .showLoading(viewModel.showLoading)
         .optionalTitle(viewModel.movie.title)
     }
 }
