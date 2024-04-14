@@ -25,6 +25,7 @@
 		1320E4E72BCC38FB00402299 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E62BCC38FB00402299 /* Image+Extension.swift */; };
 		1320E4EA2BCC39AD00402299 /* StarWarsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E92BCC39AD00402299 /* StarWarsIcon.swift */; };
 		1320E4EC2BCC3D7E00402299 /* StarWarsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */; };
+		1320E4EE2BCC3F4900402299 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4ED2BCC3F4900402299 /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		1320E4E62BCC38FB00402299 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		1320E4E92BCC39AD00402299 /* StarWarsIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsIcon.swift; sourceTree = "<group>"; };
 		1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsScreen.swift; sourceTree = "<group>"; };
+		1320E4ED2BCC3F4900402299 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4A52BCC301600402299 /* MoviesView.swift */,
+				1320E4ED2BCC3F4900402299 /* MovieDetailView.swift */,
 				1320E4E22BCC35AB00402299 /* MovieRowView.swift */,
 				1320E4DB2BCC315700402299 /* MoviesViewModel.swift */,
 			);
@@ -362,6 +365,7 @@
 				1320E4E12BCC326E00402299 /* BackendService.swift in Sources */,
 				1320E4D62BCC30D200402299 /* Movies.swift in Sources */,
 				1320E4A62BCC301600402299 /* MoviesView.swift in Sources */,
+				1320E4EE2BCC3F4900402299 /* MovieDetailView.swift in Sources */,
 				1320E4D02BCC303C00402299 /* APIService.swift in Sources */,
 				1320E4E32BCC35AB00402299 /* MovieRowView.swift in Sources */,
 				1320E4D32BCC307700402299 /* Endpoint.swift in Sources */,
