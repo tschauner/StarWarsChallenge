@@ -26,6 +26,8 @@
 		1320E4EA2BCC39AD00402299 /* StarWarsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4E92BCC39AD00402299 /* StarWarsIcon.swift */; };
 		1320E4EC2BCC3D7E00402299 /* StarWarsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */; };
 		1320E4EE2BCC3F4900402299 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4ED2BCC3F4900402299 /* MovieDetailView.swift */; };
+		1320E4F12BCC401A00402299 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F02BCC401A00402299 /* NavigationTitleModifier.swift */; };
+		1320E4F32BCC403600402299 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4F22BCC403600402299 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		1320E4E92BCC39AD00402299 /* StarWarsIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsIcon.swift; sourceTree = "<group>"; };
 		1320E4EB2BCC3D7E00402299 /* StarWarsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsScreen.swift; sourceTree = "<group>"; };
 		1320E4ED2BCC3F4900402299 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		1320E4F02BCC401A00402299 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
+		1320E4F22BCC403600402299 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4A32BCC301600402299 /* StarWarsApp.swift */,
+				1320E4EF2BCC400500402299 /* ViewModifier */,
 				1320E4E82BCC399600402299 /* Shared */,
 				1320E4E52BCC389800402299 /* Extensions */,
 				1320E4DD2BCC31E600402299 /* Protocols */,
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				1320E4E62BCC38FB00402299 /* Image+Extension.swift */,
+				1320E4F22BCC403600402299 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +233,14 @@
 				1320E4E92BCC39AD00402299 /* StarWarsIcon.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		1320E4EF2BCC400500402299 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4F02BCC401A00402299 /* NavigationTitleModifier.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +375,8 @@
 			files = (
 				1320E4E72BCC38FB00402299 /* Image+Extension.swift in Sources */,
 				1320E4EC2BCC3D7E00402299 /* StarWarsScreen.swift in Sources */,
+				1320E4F32BCC403600402299 /* View+Extension.swift in Sources */,
+				1320E4F12BCC401A00402299 /* NavigationTitleModifier.swift in Sources */,
 				1320E4DF2BCC320100402299 /* BackendServiceProtocol.swift in Sources */,
 				1320E4E12BCC326E00402299 /* BackendService.swift in Sources */,
 				1320E4D62BCC30D200402299 /* Movies.swift in Sources */,

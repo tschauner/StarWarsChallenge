@@ -37,5 +37,6 @@ struct MovieDetailView: View {
             Spacer()
         }
         .padding(15)
+        .optionalTitle(movie.title)
     }
 }
