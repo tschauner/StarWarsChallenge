@@ -14,6 +14,8 @@
 		1320E4B62BCC301700402299 /* StarWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4B52BCC301700402299 /* StarWarsTests.swift */; };
 		1320E4C02BCC301700402299 /* StarWarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4BF2BCC301700402299 /* StarWarsUITests.swift */; };
 		1320E4C22BCC301700402299 /* StarWarsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4C12BCC301700402299 /* StarWarsUITestsLaunchTests.swift */; };
+		1320E4D02BCC303C00402299 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4CF2BCC303C00402299 /* APIService.swift */; };
+		1320E4D32BCC307700402299 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320E4D22BCC307700402299 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		1320E4BB2BCC301700402299 /* StarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1320E4BF2BCC301700402299 /* StarWarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITests.swift; sourceTree = "<group>"; };
 		1320E4C12BCC301700402299 /* StarWarsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1320E4CF2BCC303C00402299 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1320E4D22BCC307700402299 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				1320E4A32BCC301600402299 /* StarWarsApp.swift */,
 				1320E4A52BCC301600402299 /* ContentView.swift */,
+				1320E4D12BCC306D00402299 /* Endpoint */,
+				1320E4CE2BCC302100402299 /* Services */,
 				1320E4A72BCC301700402299 /* Assets.xcassets */,
 				1320E4A92BCC301700402299 /* StarWars.entitlements */,
 				1320E4AA2BCC301700402299 /* Preview Content */,
@@ -127,6 +133,22 @@
 				1320E4C12BCC301700402299 /* StarWarsUITestsLaunchTests.swift */,
 			);
 			path = StarWarsUITests;
+			sourceTree = "<group>";
+		};
+		1320E4CE2BCC302100402299 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4CF2BCC303C00402299 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1320E4D12BCC306D00402299 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				1320E4D22BCC307700402299 /* Endpoint.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1320E4A62BCC301600402299 /* ContentView.swift in Sources */,
+				1320E4D02BCC303C00402299 /* APIService.swift in Sources */,
+				1320E4D32BCC307700402299 /* Endpoint.swift in Sources */,
 				1320E4A42BCC301600402299 /* StarWarsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
