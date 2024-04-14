@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct StarWarsApp: App {
+    @State private var viewModel = MoviesViewModel()
+
     var body: some Scene {
         WindowGroup {
-            MoviesView(viewModel: MoviesViewModel())
+            MoviesView(viewModel: viewModel)
         }
     }
 }

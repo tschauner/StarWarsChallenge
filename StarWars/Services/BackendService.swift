@@ -12,4 +12,8 @@ class BackendService: BackendServiceProtocol {
     func getMovies() async throws -> Movies {
         try await APIService.shared.get(.getMovies)
     }
+
+    func getPeople() async throws -> People {
+        try await APIService.shared.get(.getPeople)
+    }
 }

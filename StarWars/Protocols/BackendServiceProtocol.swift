@@ -9,4 +9,5 @@ import Foundation
 
 protocol BackendServiceProtocol {
     func getMovies() async throws -> Movies
+    func getPeople() async throws -> People
 }

@@ -34,7 +34,7 @@ struct MoviesView<T: MoviesViewModelProtocol>: View where T.Action == MoviesView
     private func view(for screen: MoviesViewModel.Screen) -> some View {
         switch screen {
         case .movieDetail(let movie):
-            MovieDetailView(movie: movie)
+            MovieDetailView(viewModel: MovieDetailViewModel(movie: movie))
         }
     }
 }
