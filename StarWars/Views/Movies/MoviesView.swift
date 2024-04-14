@@ -20,7 +20,7 @@ struct MoviesView<T: MoviesViewModelProtocol>: View where T.Action == MoviesView
             }
         }
         .listStyle(.plain)
-        .padding()
+        .padding(.top, 15)
         .navigationTitle("Movies")
         .task {
             viewModel.getMovies()

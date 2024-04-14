@@ -11,8 +11,8 @@ struct MovieRowView: View {
     let movie: Movie
 
     var body: some View {
-        HStack(spacing: 20) {
-            Image(systemName: "popcorn")
+        HStack(spacing: 15) {
+            Image(icon: .popcorn)
 
             VStack {
                 if let title = movie.title {
@@ -28,7 +28,7 @@ struct MovieRowView: View {
                 }
             }
 
-            Image(systemName: "heart")
+            Image(icon: .chevronRight)
         }
     }
 }
